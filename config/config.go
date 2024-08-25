@@ -3,6 +3,7 @@ package config
 import (
 	"gopkg.in/go-ini/ini.v1"
 	"log"
+	"todo-app/utils"
 )
 
 type List struct {
@@ -17,6 +18,7 @@ var Config List
 func init() {
 	// LoadConfig main関数より前に発火するように
 	LoadConfig()
+	utils.LoggingSettings(Config.LogFile)
 }
 
 func LoadConfig() {
