@@ -1,8 +1,10 @@
 package models
 
 import (
+	"crypto/sha1"
 	"database/sql"
 	"fmt"
+	"github.com/google/uuid"
 	"log"
 	"todo-app/config"
 
@@ -32,4 +34,14 @@ func init() {
     	created_at DATETIME,)`, tableNameUser)
 
 	_, err = Db.Exec(comU)
+}
+
+func createUUID() (id uuid.UUID) {
+	id = uuid.New()
+	return id
+}
+
+func Encrypt(plane string) (crypt string) {
+	crypt = fmt.Sprintf("%x", sha1.Sum([]byte(plane)))
+	return crypt
 }

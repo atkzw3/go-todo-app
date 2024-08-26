@@ -10,4 +10,12 @@ func main() {
 	//log.Print("test")
 
 	fmt.Println(models.Db)
+
+	u := &models.User{}
+	u.Name = "test"
+	u.Email = "test@test.com"
+	u.Password = "123456"
+	fmt.Println(u)
+
+	u.CreateUser()
 }
