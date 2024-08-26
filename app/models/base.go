@@ -32,7 +32,4 @@ func init() {
     	created_at DATETIME,)`, tableNameUser)
 
 	_, err = Db.Exec(comU)
-	if err != nil {
-		log.Fatal(err)
-	}
 }

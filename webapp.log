@@ -1,2 +1,6 @@
 2024/08/25 22:22:48 main.go:11: test
 2024/08/26 22:16:13 base.go:21: sql: unknown driver "sqlite3" (forgotten import?)
+2024/08/26 22:29:09 main.go:11: test
+2024/08/26 22:29:29 main.go:11: test
+2024/08/26 22:40:22 base.go:36: near ")": syntax error
+2024/08/26 22:41:09 base.go:36: near ")": syntax error
