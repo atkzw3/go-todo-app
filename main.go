@@ -33,4 +33,8 @@ func main() {
 
 	u2, _ := models.GetUser(1)
 	fmt.Println(u2)
+
+	u2.DeleteUser()
+	u3, _ := models.GetUser(1)
+	fmt.Println(u3) // データがないので初期値が返ってくる
 }
