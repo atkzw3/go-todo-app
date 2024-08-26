@@ -50,3 +50,14 @@ func GetUser(id int) (user User, err error) {
 
 	return user, err
 }
+
+func (u *User) UpdateUser() (err error) {
+	cmdU := `update users set name=?, email=?, password=? where id=?`
+
+	_, err = Db.Exec(cmdU, u.Name, u.Email, u.Password, u.ID)
+
+	if err != nil {
+		log.Println(err)
+	}
+	return err
+}
