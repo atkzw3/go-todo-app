@@ -4,3 +4,6 @@
 2024/08/26 22:29:29 main.go:11: test
 2024/08/26 22:40:22 base.go:36: near ")": syntax error
 2024/08/26 22:41:09 base.go:36: near ")": syntax error
+2024/08/27 23:18:52 todos.go:18: insert into todos (content, user_id, created_at) values(?, ?, ?) コンテンツ！ &{0     0001-01-01 00:00:00 +0000 UTC}
+2024/08/27 23:20:50 todos.go:18: insert into todos (content, user_id, created_at) values(?, ?, ?) コンテンツ！ &{0  test test@test.com 123456 0001-01-01 00:00:00 +0000 UTC}
+2024/08/27 23:21:43 todos.go:18: insert into todos (content, user_id, created_at) values(?, ?, ?) コンテンツ！! &{1 6b50d3d5-26b7-4eaf-9168-68596c90b73d test test@test.com 7c4a8d09ca3762af61e59520943dc26494f8941b 2024-08-27 23:20:14.893792 +0900 +0900}
