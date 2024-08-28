@@ -44,4 +44,6 @@ func main() {
 		fmt.Println(err)
 	}
 
+	t, _ := models.GetTodo(6)
+	fmt.Println("todo", t)
 }

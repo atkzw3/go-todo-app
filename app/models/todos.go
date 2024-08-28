@@ -25,3 +25,23 @@ func (u *User) CreateTodo(content string) (err error) {
 
 	return err
 }
+
+func GetTodo(id int) (todo Todo, err error) {
+	cmd := `select * from todos where id = ?`
+
+	log.Println(cmd, id)
+
+	todo = Todo{}
+
+	err = Db.QueryRow(cmd, id).Scan(
+		&todo.ID,
+		&todo.Content,
+		&todo.UserID,
+		&todo.CreatedAt)
+
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	return todo, err
+}
