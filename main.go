@@ -49,4 +49,8 @@ func main() {
 
 	todoAll, _ := models.GetTodoAll()
 	fmt.Println(todoAll)
+
+	for _, v := range todoAll {
+		fmt.Println(v)
+	}
 }
