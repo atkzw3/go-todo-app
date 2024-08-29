@@ -63,4 +63,13 @@ func main() {
 	for _, v := range todos {
 		fmt.Println(v)
 	}
+
+	t.Content = "コンテンツ更新しますよeee！！！"
+
+	errU := t.UpdateTodo()
+	if errU != nil {
+		fmt.Println(errU)
+	}
+	t2, _ := models.GetTodo(6)
+	fmt.Println(t2)
 }
