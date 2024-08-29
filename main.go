@@ -53,4 +53,14 @@ func main() {
 	for _, v := range todoAll {
 		fmt.Println(v)
 	}
+
+	fmt.Println("GetByUser メソッド確認")
+	todos, err := u2.GetTodosByUser()
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	for _, v := range todos {
+		fmt.Println(v)
+	}
 }
