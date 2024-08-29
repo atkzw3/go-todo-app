@@ -72,4 +72,11 @@ func main() {
 	}
 	t2, _ := models.GetTodo(6)
 	fmt.Println(t2)
+
+	t1, _ := models.GetTodo(1)
+	fmt.Println(t1)
+	err = t1.DeleteTodo()
+	if err != nil {
+		fmt.Println(err)
+	}
 }

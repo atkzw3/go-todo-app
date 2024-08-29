@@ -21,3 +21,9 @@
 2024/08/29 13:29:05 todos.go:18: insert into todos (content, user_id, created_at) values(?, ?, ?) コンテンツ！! &{1 6b50d3d5-26b7-4eaf-9168-68596c90b73d test test@test.com 7c4a8d09ca3762af61e59520943dc26494f8941b 2024-08-27 23:20:14.893792 +0900 +0900}
 2024/08/29 13:29:05 todos.go:32: select * from todos where id = ? 6
 2024/08/29 13:29:05 todos.go:32: select * from todos where id = ? 6
+2024/08/29 13:33:05 todos.go:18: insert into todos (content, user_id, created_at) values(?, ?, ?) コンテンツ！! &{1 6b50d3d5-26b7-4eaf-9168-68596c90b73d test test@test.com 7c4a8d09ca3762af61e59520943dc26494f8941b 2024-08-27 23:20:14.893792 +0900 +0900}
+2024/08/29 13:33:05 todos.go:32: select * from todos where id = ? 6
+2024/08/29 13:33:05 todos.go:32: select * from todos where id = ? 6
+2024/08/29 13:33:05 todos.go:32: select * from todos where id = ? 1
+2024/08/29 13:33:05 todos.go:32: select * from todos where id = ? 1
+2024/08/29 13:33:05 todos.go:43: sql: no rows in result set
