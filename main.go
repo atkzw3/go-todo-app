@@ -8,6 +8,16 @@ import (
 func main() {
 	//fmt.Println(config.Config)
 	//log.Print("test")
+	//
+	//user, err := models.GetUserByEmail("test@test.com")
+	//
+	//log.Println(user, err)
+	//
+	//session, err := user.CreateSession()
+	//log.Println(session, err)
+	//
+	//v, _ := session.CheckSession()
+	//log.Println(v)
 
 	err := controllers.StartMainServer()
 	if err != nil {
