@@ -27,3 +27,6 @@
 2024/08/29 13:33:05 todos.go:32: select * from todos where id = ? 1
 2024/08/29 13:33:05 todos.go:32: select * from todos where id = ? 1
 2024/08/29 13:33:05 todos.go:43: sql: no rows in result set
+2024/08/31 22:17:11 route_auth.go:14: aaaa
+2024/08/31 22:17:17 route_auth.go:14: aaaa
+2024/08/31 22:17:37 route_auth.go:14: aaaa
