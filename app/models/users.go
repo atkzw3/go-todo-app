@@ -123,7 +123,7 @@ func (u *User) CreateSession() (session Session, err error) {
 }
 
 func (s *Session) CheckSession() (valid bool, err error) {
-	cmd := `select id uuid, email, user_id, created_at from sessions where uuid=? `
+	cmd := `select id, uuid, email, user_id, created_at from sessions where uuid=? `
 
 	err = Db.QueryRow(cmd, s.UUID).Scan(
 		&s.ID,
