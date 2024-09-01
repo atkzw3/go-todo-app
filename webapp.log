@@ -681,3 +681,13 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/09/02 00:06:45 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
 2024/09/02 00:06:47 todos.go:32: select * from todos where id = ? 14
 2024/09/02 00:06:47 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:11:19 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:11:19 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:12:00 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:12:00 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:13:06 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:13:06 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:13:12 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:13:12 route.go:130: update for todo {14 作成するよ！！=> 更新します！ 9 2024-09-01 16:13:13.425667 +0900 +0900}
+2024/09/02 00:13:12 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:13:12 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}

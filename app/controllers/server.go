@@ -36,6 +36,7 @@ func StartMainServer() error {
 	http.HandleFunc("/todos/new", todoNew)
 	http.HandleFunc("/todos/save", todoSave)
 	http.HandleFunc("/todos/edit/{id}", todoEdit)
+	http.HandleFunc("/todos/update/{id}", todoUpdate)
 
 	return http.ListenAndServe(":"+config.Config.Port, nil)
 }

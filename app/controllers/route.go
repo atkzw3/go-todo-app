@@ -100,3 +100,34 @@ func todoEdit(w http.ResponseWriter, req *http.Request) {
 
 	generateHTML(w, todo, "layout", "private_navbar", "todo_edit")
 }
+
+func todoUpdate(w http.ResponseWriter, req *http.Request) {
+	_, err := session(w, req)
+	if err != nil {
+		fmt.Println("ログインしていない")
+		http.Redirect(w, req, "/login", 302)
+	}
+
+	id := req.PathValue("id")
+	idInt, err := strconv.Atoi(id)
+	if err != nil {
+		log.Println(err)
+	}
+
+	todo, err := models.GetTodo(idInt)
+	if err != nil {
+		log.Println(err)
+	}
+
+	content := req.PostFormValue("content")
+	todo.Content = content
+
+	err2 := todo.UpdateTodo()
+
+	if err2 != nil {
+		log.Println(err2)
+	}
+	log.Println("update for todo", todo)
+
+	http.Redirect(w, req, "/todos", 302)
+}
