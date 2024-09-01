@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"strconv"
 	"todo-app/app/models"
 )
 
@@ -76,23 +75,14 @@ func todoSave(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-func todoEdit(w http.ResponseWriter, req *http.Request) {
+func todoEdit(w http.ResponseWriter, req *http.Request, id int) {
+	fmt.Println("todoEdit")
 	_, err := session(w, req)
 	if err != nil {
 		fmt.Println("ログインしていない")
 		http.Redirect(w, req, "/login", 302)
 	}
-
-	id := req.PathValue("id")
-
-	fmt.Println("editのid = ", id)
-
-	idInt, err := strconv.Atoi(id)
-	if err != nil {
-		log.Println(err)
-	}
-
-	todo, err := models.GetTodo(idInt)
+	todo, err := models.GetTodo(id)
 
 	if err != nil {
 		log.Println(err)
@@ -101,20 +91,21 @@ func todoEdit(w http.ResponseWriter, req *http.Request) {
 	generateHTML(w, todo, "layout", "private_navbar", "todo_edit")
 }
 
-func todoUpdate(w http.ResponseWriter, req *http.Request) {
+func todoUpdate(w http.ResponseWriter, req *http.Request, id int) {
 	_, err := session(w, req)
 	if err != nil {
 		fmt.Println("ログインしていない")
 		http.Redirect(w, req, "/login", 302)
 	}
 
-	id := req.PathValue("id")
-	idInt, err := strconv.Atoi(id)
-	if err != nil {
-		log.Println(err)
-	}
+	// MEMO: リファクタ前はこのようにも取得できていた。
+	//id := req.PathValue("id")
+	//idInt, err := strconv.Atoi(id)
+	//if err != nil {
+	//	log.Println(err)
+	//}
 
-	todo, err := models.GetTodo(idInt)
+	todo, err := models.GetTodo(id)
 	if err != nil {
 		log.Println(err)
 	}
