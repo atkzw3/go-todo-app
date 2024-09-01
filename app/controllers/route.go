@@ -37,3 +37,38 @@ func index(w http.ResponseWriter, req *http.Request) {
 		generateHTML(w, user, "layout", "private_navbar", "index")
 	}
 }
+
+func todoNew(w http.ResponseWriter, req *http.Request) {
+	_, err := session(w, req)
+	if err != nil {
+		http.Redirect(w, req, "/login", 302)
+	} else {
+		generateHTML(w, nil, "layout", "private_navbar", "todo_new")
+	}
+}
+
+func todoSave(w http.ResponseWriter, req *http.Request) {
+	session, err := session(w, req)
+	if err != nil {
+		http.Redirect(w, req, "/login", 302)
+	} else {
+		err := req.ParseForm()
+		if err != nil {
+			log.Println(err)
+		}
+		user, err := session.GetUserBySession()
+		if err != nil {
+			log.Println(err)
+		}
+		content := req.PostFormValue("content")
+		if content == "" {
+			log.Println("content is empty")
+		}
+
+		if err := user.CreateTodo(content); err != nil {
+			log.Println(err)
+		}
+
+		http.Redirect(w, req, "/todos", 302)
+	}
+}
