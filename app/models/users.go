@@ -12,6 +12,7 @@ type User struct {
 	Email     string
 	Password  string
 	CreatedAt time.Time
+	Todos     []Todo
 }
 
 type Session struct {
@@ -149,4 +150,23 @@ func (s *Session) DeleteSessionByUUID() (err error) {
 		log.Println(err)
 	}
 	return err
+}
+
+func (s *Session) GetUserBySession() (user User, err error) {
+	user = User{}
+	cmd := `select id, uuid, name, email, password, created_at from users where id=?`
+
+	err = Db.QueryRow(cmd, s.UserId).Scan(
+		&user.ID,
+		&user.UUID,
+		&user.Name,
+		&user.Email,
+		&user.Password,
+		&user.CreatedAt)
+
+	if err != nil {
+		log.Println(err)
+	}
+
+	return user, err
 }

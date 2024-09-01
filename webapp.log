@@ -53,3 +53,373 @@
 2024/09/01 15:40:38 users.go:136: sql: no rows in result set
 2024/09/01 15:40:38 users.go:136: sql: no rows in result set
 2024/09/01 15:40:38 users.go:136: sql: no rows in result set
+2024/09/01 15:53:36 users.go:137: sql: no rows in result set
+2024/09/01 15:53:36 users.go:137: sql: no rows in result set
+2024/09/01 15:53:40 users.go:137: sql: no rows in result set
+2024/09/01 15:53:40 users.go:137: sql: no rows in result set
+2024/09/01 15:53:41 users.go:137: sql: no rows in result set
+2024/09/01 15:53:41 users.go:137: sql: no rows in result set
+2024/09/01 15:53:45 users.go:168: no such column: name
+2024/09/01 15:53:45 route.go:26: no such column: name
+2024/09/01 15:53:45 server.go:3418: http: panic serving [::1]:57180: no such column: name
+
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x10117f740?, 0xc00009ac00?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+log.Panicln({0xc000029a50?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/log/log.go:446 +0x5a
+todo-app/app/controllers.index({0x1012015e0, 0xc0000bd0a0}, 0xc0000e7c20)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:26 +0x1ec
+net/http.HandlerFunc.ServeHTTP(0x1014879c0?, {0x1012015e0?, 0xc0000bd0a0?}, 0x100e984ba?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c5b0f9?, {0x1012015e0, 0xc0000bd0a0}, 0xc0000e7c20)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000096030?}, {0x1012015e0?, 0xc0000bd0a0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc000164090, {0x101201ca0, 0xc000115440})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/01 15:53:45 users.go:168: no such column: name
+2024/09/01 15:53:45 route.go:26: no such column: name
+2024/09/01 15:53:45 server.go:3418: http: panic serving [::1]:57181: no such column: name
+
+goroutine 8 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x10117f740?, 0xc00009acb0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+log.Panicln({0xc00025ba50?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/log/log.go:446 +0x5a
+todo-app/app/controllers.index({0x1012015e0, 0xc0000bd420}, 0xc0000e7e60)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:26 +0x1ec
+net/http.HandlerFunc.ServeHTTP(0x1014879c0?, {0x1012015e0?, 0xc0000bd420?}, 0x100e984ba?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c5b0f9?, {0x1012015e0, 0xc0000bd420}, 0xc0000e7e60)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000115590?}, {0x1012015e0?, 0xc0000bd420?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc000164120, {0x101201ca0, 0xc000115440})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/01 15:53:45 users.go:168: no such column: name
+2024/09/01 15:53:45 route.go:26: no such column: name
+2024/09/01 15:53:45 server.go:3418: http: panic serving [::1]:57216: no such column: name
+
+goroutine 32 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x10117f740?, 0xc00009ad70?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+log.Panicln({0xc000143a50?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/log/log.go:446 +0x5a
+todo-app/app/controllers.index({0x1012015e0, 0xc0000bd7a0}, 0xc000290120)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:26 +0x1ec
+net/http.HandlerFunc.ServeHTTP(0x1014879c0?, {0x1012015e0?, 0xc0000bd7a0?}, 0x100e984ba?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c5b0f9?, {0x1012015e0, 0xc0000bd7a0}, 0xc000290120)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000eb740?}, {0x1012015e0?, 0xc0000bd7a0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc0000a3560, {0x101201ca0, 0xc000115440})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/01 15:53:46 users.go:168: no such column: name
+2024/09/01 15:53:46 route.go:26: no such column: name
+2024/09/01 15:53:46 server.go:3418: http: panic serving [::1]:57222: no such column: name
+
+goroutine 12 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x10117f740?, 0xc000016760?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+log.Panicln({0xc000149a50?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/log/log.go:446 +0x5a
+todo-app/app/controllers.index({0x1012015e0, 0xc00017ca80}, 0xc0001339e0)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:26 +0x1ec
+net/http.HandlerFunc.ServeHTTP(0x1014879c0?, {0x1012015e0?, 0xc00017ca80?}, 0x100e984ba?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c5b0f9?, {0x1012015e0, 0xc00017ca80}, 0xc0001339e0)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00018e4e0?}, {0x1012015e0?, 0xc00017ca80?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc0001645a0, {0x101201ca0, 0xc000115440})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/01 15:53:51 users.go:168: no such column: name
+2024/09/01 15:53:51 route.go:26: no such column: name
+2024/09/01 15:53:51 server.go:3418: http: panic serving [::1]:57223: no such column: name
+
+goroutine 14 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x10117f740?, 0xc000016820?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+log.Panicln({0xc000149a50?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/log/log.go:446 +0x5a
+todo-app/app/controllers.index({0x1012015e0, 0xc00017ce00}, 0xc0002905a0)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:26 +0x1ec
+net/http.HandlerFunc.ServeHTTP(0x1014879c0?, {0x1012015e0?, 0xc00017ce00?}, 0x100e984ba?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c5b0f9?, {0x1012015e0, 0xc00017ce00}, 0xc0002905a0)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000ebb00?}, {0x1012015e0?, 0xc00017ce00?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc0001647e0, {0x101201ca0, 0xc000115440})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/01 15:53:51 users.go:168: no such column: name
+2024/09/01 15:53:51 route.go:26: no such column: name
+2024/09/01 15:53:51 server.go:3418: http: panic serving [::1]:57224: no such column: name
+
+goroutine 15 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x10117f740?, 0xc0000168d0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+log.Panicln({0xc000149a50?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/log/log.go:446 +0x5a
+todo-app/app/controllers.index({0x1012015e0, 0xc00017d180}, 0xc000133b00)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:26 +0x1ec
+net/http.HandlerFunc.ServeHTTP(0x1014879c0?, {0x1012015e0?, 0xc00017d180?}, 0x100e984ba?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c5b0f9?, {0x1012015e0, 0xc00017d180}, 0xc000133b00)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00018e7b0?}, {0x1012015e0?, 0xc00017d180?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc000164870, {0x101201ca0, 0xc000115440})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/01 15:53:51 users.go:168: no such column: name
+2024/09/01 15:53:51 route.go:26: no such column: name
+2024/09/01 15:53:51 server.go:3418: http: panic serving [::1]:57246: no such column: name
+
+goroutine 67 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x10117f740?, 0xc00021c510?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+log.Panicln({0xc000237a50?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/log/log.go:446 +0x5a
+todo-app/app/controllers.index({0x1012015e0, 0xc000206620}, 0xc000201d40)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:26 +0x1ec
+net/http.HandlerFunc.ServeHTTP(0x1014879c0?, {0x1012015e0?, 0xc000206620?}, 0x100e984ba?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c5b0f9?, {0x1012015e0, 0xc000206620}, 0xc000201d40)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000209b90?}, {0x1012015e0?, 0xc000206620?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc000164c60, {0x101201ca0, 0xc000115440})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/01 15:54:21 users.go:168: no such column: name
+2024/09/01 15:54:21 route.go:26: no such column: name
+2024/09/01 15:54:21 server.go:3418: http: panic serving [::1]:57376: no such column: name
+
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x10bc3c740?, 0xc0001240a0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+log.Panicln({0xc000029a50?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/log/log.go:446 +0x5a
+todo-app/app/controllers.index({0x10bcbe5e0, 0xc000144000}, 0xc0000b2900)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:26 +0x1ec
+net/http.HandlerFunc.ServeHTTP(0x10bf449c0?, {0x10bcbe5e0?, 0xc000144000?}, 0x10b9554ba?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10b7180f9?, {0x10bcbe5e0, 0xc000144000}, 0xc0000b2900)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000095530?}, {0x10bcbe5e0?, 0xc000144000?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc0000e4090, {0x10bcbeca0, 0xc000095440})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/01 15:54:22 users.go:168: no such column: name
+2024/09/01 15:54:22 route.go:26: no such column: name
+2024/09/01 15:54:22 server.go:3418: http: panic serving [::1]:57377: no such column: name
+
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x10bc3c740?, 0xc000124160?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+log.Panicln({0xc0000c3a50?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/log/log.go:446 +0x5a
+todo-app/app/controllers.index({0x10bcbe5e0, 0xc000144460}, 0xc00012a000)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:26 +0x1ec
+net/http.HandlerFunc.ServeHTTP(0x10bf449c0?, {0x10bcbe5e0?, 0xc000144460?}, 0x10b9554ba?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10b7180f9?, {0x10bcbe5e0, 0xc000144460}, 0xc00012a000)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000118090?}, {0x10bcbe5e0?, 0xc000144460?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc00011c000, {0x10bcbeca0, 0xc000095440})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/01 15:54:22 users.go:168: no such column: name
+2024/09/01 15:54:22 route.go:26: no such column: name
+2024/09/01 15:54:22 server.go:3418: http: panic serving [::1]:57382: no such column: name
+
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x10bc3c740?, 0xc000124210?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+log.Panicln({0xc0000c3a50?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/log/log.go:446 +0x5a
+todo-app/app/controllers.index({0x10bcbe5e0, 0xc0001447e0}, 0xc00012a360)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:26 +0x1ec
+net/http.HandlerFunc.ServeHTTP(0x10bf449c0?, {0x10bcbe5e0?, 0xc0001447e0?}, 0x10b9554ba?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10b7180f9?, {0x10bcbe5e0, 0xc0001447e0}, 0xc00012a360)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000118360?}, {0x10bcbe5e0?, 0xc0001447e0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc00011c240, {0x10bcbeca0, 0xc000095440})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/01 15:54:22 users.go:168: no such column: name
+2024/09/01 15:54:22 route.go:26: no such column: name
+2024/09/01 15:54:22 server.go:3418: http: panic serving [::1]:57383: no such column: name
+
+goroutine 23 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x10bc3c740?, 0xc0001242d0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+log.Panicln({0xc0000c3a50?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/log/log.go:446 +0x5a
+todo-app/app/controllers.index({0x10bcbe5e0, 0xc000144b60}, 0xc00012a480)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:26 +0x1ec
+net/http.HandlerFunc.ServeHTTP(0x10bf449c0?, {0x10bcbe5e0?, 0xc000144b60?}, 0x10b9554ba?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10b7180f9?, {0x10bcbe5e0, 0xc000144b60}, 0xc00012a480)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000118810?}, {0x10bcbe5e0?, 0xc000144b60?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc00011c630, {0x10bcbeca0, 0xc000095440})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/01 15:54:24 users.go:168: no such column: name
+2024/09/01 15:54:24 route.go:26: no such column: name
+2024/09/01 15:54:24 server.go:3418: http: panic serving [::1]:57397: no such column: name
+
+goroutine 25 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x10bc3c740?, 0xc0000164f0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+log.Panicln({0xc0000c9a50?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/log/log.go:446 +0x5a
+todo-app/app/controllers.index({0x10bcbe5e0, 0xc0000fc620}, 0xc00012a5a0)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:26 +0x1ec
+net/http.HandlerFunc.ServeHTTP(0x10bf449c0?, {0x10bcbe5e0?, 0xc0000fc620?}, 0x10b9554ba?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10b7180f9?, {0x10bcbe5e0, 0xc0000fc620}, 0xc00012a5a0)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000118a80?}, {0x10bcbe5e0?, 0xc0000fc620?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc00011c870, {0x10bcbeca0, 0xc000095440})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/01 15:55:27 users.go:168: no such column: name
+2024/09/01 15:55:27 route.go:26: no such column: name
+2024/09/01 15:55:27 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 15:55:27 users.go:168: no such column: name
+2024/09/01 15:55:27 route.go:26: no such column: name
+2024/09/01 15:55:27 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 15:55:35 users.go:137: sql: no rows in result set
+2024/09/01 15:55:35 users.go:137: sql: no rows in result set
+2024/09/01 15:55:40 users.go:168: no such column: name
+2024/09/01 15:55:40 route.go:26: no such column: name
+2024/09/01 15:55:40 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 15:55:40 users.go:168: no such column: name
+2024/09/01 15:55:40 route.go:26: no such column: name
+2024/09/01 15:55:40 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 15:56:13 users.go:168: no such column: name
+2024/09/01 15:56:13 route.go:26: no such column: name
+2024/09/01 15:56:13 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 15:56:13 users.go:168: no such column: name
+2024/09/01 15:56:13 route.go:26: no such column: name
+2024/09/01 15:56:13 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 15:57:21 users.go:137: sql: no rows in result set
+2024/09/01 15:57:21 users.go:137: sql: no rows in result set
+2024/09/01 15:57:40 users.go:137: sql: no rows in result set
+2024/09/01 15:57:40 users.go:137: sql: no rows in result set
+2024/09/01 15:57:42 users.go:137: sql: no rows in result set
+2024/09/01 15:57:42 users.go:137: sql: no rows in result set
+2024/09/01 15:57:53 users.go:137: sql: no rows in result set
+2024/09/01 15:57:53 users.go:137: sql: no rows in result set
+2024/09/01 15:57:55 users.go:137: sql: no rows in result set
+2024/09/01 15:57:55 users.go:137: sql: no rows in result set
+2024/09/01 15:58:02 route_auth.go:57: sql: no rows in result set
+2024/09/01 15:58:02 server.go:3418: http: superfluous response.WriteHeader call from todo-app/app/controllers.authenticate (route_auth.go:75)
+2024/09/01 15:58:02 users.go:137: sql: no rows in result set
+2024/09/01 15:58:02 users.go:137: sql: no rows in result set
+2024/09/01 15:58:11 users.go:137: sql: no rows in result set
+2024/09/01 15:58:11 users.go:137: sql: no rows in result set
+2024/09/01 15:58:15 users.go:137: sql: no rows in result set
+2024/09/01 15:58:15 users.go:137: sql: no rows in result set
+2024/09/01 15:58:36 users.go:168: no such column: name
+2024/09/01 15:58:36 route.go:26: no such column: name
+2024/09/01 15:58:36 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 15:58:36 users.go:168: no such column: name
+2024/09/01 15:58:36 route.go:26: no such column: name
+2024/09/01 15:58:36 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:00:26 users.go:168: no such column: name
+2024/09/01 16:00:26 route.go:26: no such column: name
+2024/09/01 16:00:26 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:00:26 users.go:168: no such column: name
+2024/09/01 16:00:26 route.go:26: no such column: name
+2024/09/01 16:00:26 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:00:27 users.go:168: no such column: name
+2024/09/01 16:00:27 route.go:26: no such column: name
+2024/09/01 16:00:27 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:00:27 users.go:168: no such column: name
+2024/09/01 16:00:27 route.go:26: no such column: name
+2024/09/01 16:00:27 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:00:27 users.go:168: no such column: name
+2024/09/01 16:00:27 route.go:26: no such column: name
+2024/09/01 16:00:27 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:00:27 users.go:168: no such column: name
+2024/09/01 16:00:27 route.go:26: no such column: name
+2024/09/01 16:00:27 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:00:28 users.go:168: no such column: name
+2024/09/01 16:00:28 route.go:26: no such column: name
+2024/09/01 16:00:28 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:00:28 users.go:168: no such column: name
+2024/09/01 16:00:28 route.go:26: no such column: name
+2024/09/01 16:00:28 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:02:52 users.go:168: no such column: name
+2024/09/01 16:02:52 route.go:26: no such column: name
+2024/09/01 16:02:52 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:02:52 users.go:168: no such column: name
+2024/09/01 16:02:52 route.go:26: no such column: name
+2024/09/01 16:02:52 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:02:53 users.go:168: no such column: name
+2024/09/01 16:02:53 route.go:26: no such column: name
+2024/09/01 16:02:53 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:02:53 users.go:168: no such column: name
+2024/09/01 16:02:53 route.go:26: no such column: name
+2024/09/01 16:02:53 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:02:53 users.go:168: no such column: name
+2024/09/01 16:02:53 route.go:26: no such column: name
+2024/09/01 16:02:53 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:02:54 users.go:168: no such column: name
+2024/09/01 16:02:54 route.go:26: no such column: name
+2024/09/01 16:02:54 route.go:29: {0     0001-01-01 00:00:00 +0000 UTC []}
+2024/09/01 16:03:26 route.go:29: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/01 16:03:26 route.go:29: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
