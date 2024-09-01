@@ -434,3 +434,250 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/09/01 16:13:28 todos.go:18: insert into todos (content, user_id, created_at) values(?, ?, ?) えええ &{9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
 2024/09/01 16:13:28 route.go:29: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
 2024/09/01 16:13:28 route.go:29: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:04:42 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:04:42 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:04:44 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:04:44 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:04:50 route.go:68: content is empty
+2024/09/02 00:04:50 todos.go:18: insert into todos (content, user_id, created_at) values(?, ?, ?)  &{9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:04:50 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:04:50 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:05:43 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:05:43 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:05:44 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:05:44 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:05:46 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:05:46 server.go:3418: http: panic serving [::1]:61053: open app/views/templates/todo_edit.html: no such file or directory
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x106b41ee0?, 0xc0004083f0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+html/template.Must(...)
+	/usr/local/Cellar/go/1.22.5/libexec/src/html/template/template.go:368
+todo-app/app/controllers.generateHTML({0x106b97620, 0xc0001ae7e0}, {0x106b67140, 0xc00018ea40}, {0xc0003e7a88?, 0xc0001a4364?, 0xe?})
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/server.go:18 +0x271
+todo-app/app/controllers.todoEdit({0x106b97620, 0xc0001ae7e0}, 0xc000191b00)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:101 +0x40a
+net/http.HandlerFunc.ServeHTTP(0x106e1d9c0?, {0x106b97620?, 0xc0001ae7e0?}, 0x10682ce1a?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x1065efaf9?, {0x106b97620, 0xc0001ae7e0}, 0xc000191b00)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0001879b0?}, {0x106b97620?, 0xc0001ae7e0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc000194480, {0x106b97ce0, 0xc000095500})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/02 00:05:46 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:05:46 server.go:3418: http: panic serving [::1]:61054: open app/views/templates/todo_edit.html: no such file or directory
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x106b41ee0?, 0xc000408ab0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+html/template.Must(...)
+	/usr/local/Cellar/go/1.22.5/libexec/src/html/template/template.go:368
+todo-app/app/controllers.generateHTML({0x106b97620, 0xc0001aea80}, {0x106b67140, 0xc00018ee40}, {0xc00031fa88?, 0xc0001a4444?, 0xe?})
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/server.go:18 +0x271
+todo-app/app/controllers.todoEdit({0x106b97620, 0xc0001aea80}, 0xc00040a360)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:101 +0x40a
+net/http.HandlerFunc.ServeHTTP(0x106e1d9c0?, {0x106b97620?, 0xc0001aea80?}, 0x10682ce1a?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x1065efaf9?, {0x106b97620, 0xc0001aea80}, 0xc00040a360)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00038a030?}, {0x106b97620?, 0xc0001aea80?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc000194510, {0x106b97ce0, 0xc000095500})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/02 00:05:46 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:05:46 server.go:3418: http: panic serving [::1]:61051: open app/views/templates/todo_edit.html: no such file or directory
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x106b41ee0?, 0xc0004091d0?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+html/template.Must(...)
+	/usr/local/Cellar/go/1.22.5/libexec/src/html/template/template.go:368
+todo-app/app/controllers.generateHTML({0x106b97620, 0xc0001aed20}, {0x106b67140, 0xc00018f240}, {0xc000029a88?, 0xc0001a4524?, 0xe?})
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/server.go:18 +0x271
+todo-app/app/controllers.todoEdit({0x106b97620, 0xc0001aed20}, 0xc00040a900)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:101 +0x40a
+net/http.HandlerFunc.ServeHTTP(0x106e1d9c0?, {0x106b97620?, 0xc0001aed20?}, 0x10682ce1a?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x1065efaf9?, {0x106b97620, 0xc0001aed20}, 0xc00040a900)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000186030?}, {0x106b97620?, 0xc0001aed20?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc0000e4090, {0x106b97ce0, 0xc000095500})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/02 00:05:46 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:05:46 server.go:3418: http: panic serving [::1]:61052: open app/views/templates/todo_edit.html: no such file or directory
+goroutine 8 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x106b41ee0?, 0xc000409890?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+html/template.Must(...)
+	/usr/local/Cellar/go/1.22.5/libexec/src/html/template/template.go:368
+todo-app/app/controllers.generateHTML({0x106b97620, 0xc0001aefc0}, {0x106b67140, 0xc00018f640}, {0xc0000c3a88?, 0xc0001a4604?, 0xe?})
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/server.go:18 +0x271
+todo-app/app/controllers.todoEdit({0x106b97620, 0xc0001aefc0}, 0xc00040aea0)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:101 +0x40a
+net/http.HandlerFunc.ServeHTTP(0x106e1d9c0?, {0x106b97620?, 0xc0001aefc0?}, 0x10682ce1a?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x1065efaf9?, {0x106b97620, 0xc0001aefc0}, 0xc00040aea0)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000095650?}, {0x106b97620?, 0xc0001aefc0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc0000e4120, {0x106b97ce0, 0xc000095500})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/02 00:05:46 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:05:46 server.go:3418: http: panic serving [::1]:61068: open app/views/templates/todo_edit.html: no such file or directory
+goroutine 40 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x106b41ee0?, 0xc00045a000?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+html/template.Must(...)
+	/usr/local/Cellar/go/1.22.5/libexec/src/html/template/template.go:368
+todo-app/app/controllers.generateHTML({0x106b97620, 0xc0001af260}, {0x106b67140, 0xc00018fa40}, {0xc0000c3a88?, 0xc0001a46e4?, 0xe?})
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/server.go:18 +0x271
+todo-app/app/controllers.todoEdit({0x106b97620, 0xc0001af260}, 0xc000333b00)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:101 +0x40a
+net/http.HandlerFunc.ServeHTTP(0x106e1d9c0?, {0x106b97620?, 0xc0001af260?}, 0x10682ce1a?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x1065efaf9?, {0x106b97620, 0xc0001af260}, 0xc000333b00)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00033c450?}, {0x106b97620?, 0xc0001af260?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc000116b40, {0x106b97ce0, 0xc000095500})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/02 00:05:47 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:05:47 server.go:3418: http: panic serving [::1]:61074: open app/views/templates/todo_edit.html: no such file or directory
+goroutine 32 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x106b41ee0?, 0xc00045a960?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+html/template.Must(...)
+	/usr/local/Cellar/go/1.22.5/libexec/src/html/template/template.go:368
+todo-app/app/controllers.generateHTML({0x106b97620, 0xc0001af5e0}, {0x106b67140, 0xc00018fec0}, {0xc0000c3a88?, 0xc0001a4844?, 0xe?})
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/server.go:18 +0x271
+todo-app/app/controllers.todoEdit({0x106b97620, 0xc0001af5e0}, 0xc00040be60)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:101 +0x40a
+net/http.HandlerFunc.ServeHTTP(0x106e1d9c0?, {0x106b97620?, 0xc0001af5e0?}, 0x10682ce1a?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x1065efaf9?, {0x106b97620, 0xc0001af5e0}, 0xc00040be60)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00045a270?}, {0x106b97620?, 0xc0001af5e0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc0001955f0, {0x106b97ce0, 0xc000095500})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/02 00:05:52 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:05:52 server.go:3418: http: panic serving [::1]:61075: open app/views/templates/todo_edit.html: no such file or directory
+goroutine 66 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x106b41ee0?, 0xc00045b170?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+html/template.Must(...)
+	/usr/local/Cellar/go/1.22.5/libexec/src/html/template/template.go:368
+todo-app/app/controllers.generateHTML({0x106b97620, 0xc0001af880}, {0x106b67140, 0xc00046e3c0}, {0xc0000c3a88?, 0xc0001a4924?, 0xe?})
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/server.go:18 +0x271
+todo-app/app/controllers.todoEdit({0x106b97620, 0xc0001af880}, 0xc00046c480)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:101 +0x40a
+net/http.HandlerFunc.ServeHTTP(0x106e1d9c0?, {0x106b97620?, 0xc0001af880?}, 0x10682ce1a?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x1065efaf9?, {0x106b97620, 0xc0001af880}, 0xc00046c480)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00045aa20?}, {0x106b97620?, 0xc0001af880?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc0001958c0, {0x106b97ce0, 0xc000095500})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/02 00:05:52 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:05:52 server.go:3418: http: panic serving [::1]:61076: open app/views/templates/todo_edit.html: no such file or directory
+goroutine 41 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x106b41ee0?, 0xc00045b860?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+html/template.Must(...)
+	/usr/local/Cellar/go/1.22.5/libexec/src/html/template/template.go:368
+todo-app/app/controllers.generateHTML({0x106b97620, 0xc0001afb20}, {0x106b67140, 0xc00046e7c0}, {0xc0000c3a88?, 0xc0001a4a04?, 0xe?})
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/server.go:18 +0x271
+todo-app/app/controllers.todoEdit({0x106b97620, 0xc0001afb20}, 0xc00046c5a0)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:101 +0x40a
+net/http.HandlerFunc.ServeHTTP(0x106e1d9c0?, {0x106b97620?, 0xc0001afb20?}, 0x10682ce1a?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x1065efaf9?, {0x106b97620, 0xc0001afb20}, 0xc00046c5a0)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00045aa80?}, {0x106b97620?, 0xc0001afb20?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc000116bd0, {0x106b97ce0, 0xc000095500})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/02 00:05:52 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:05:52 server.go:3418: http: panic serving [::1]:61099: open app/views/templates/todo_edit.html: no such file or directory
+goroutine 69 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x106b41ee0?, 0xc0004ac090?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+html/template.Must(...)
+	/usr/local/Cellar/go/1.22.5/libexec/src/html/template/template.go:368
+todo-app/app/controllers.generateHTML({0x106b97620, 0xc0001afdc0}, {0x106b67140, 0xc00046ec00}, {0xc0000c3a88?, 0xc0001a4ae4?, 0xe?})
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/server.go:18 +0x271
+todo-app/app/controllers.todoEdit({0x106b97620, 0xc0001afdc0}, 0xc00046cfc0)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:101 +0x40a
+net/http.HandlerFunc.ServeHTTP(0x106e1d9c0?, {0x106b97620?, 0xc0001afdc0?}, 0x10682ce1a?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x1065efaf9?, {0x106b97620, 0xc0001afdc0}, 0xc00046cfc0)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00045b920?}, {0x106b97620?, 0xc0001afdc0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc000195dd0, {0x106b97ce0, 0xc000095500})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/02 00:06:22 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:06:22 server.go:3418: http: panic serving [::1]:61226: open app/views/templates/todo_edit.html: no such file or directory
+goroutine 71 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:1903 +0xbe
+panic({0x106b41ee0?, 0xc0003ec090?})
+	/usr/local/Cellar/go/1.22.5/libexec/src/runtime/panic.go:770 +0x132
+html/template.Must(...)
+	/usr/local/Cellar/go/1.22.5/libexec/src/html/template/template.go:368
+todo-app/app/controllers.generateHTML({0x106b97620, 0xc0003ae540}, {0x106b67140, 0xc000394900}, {0xc00031ba88?, 0xc0003a82e4?, 0xe?})
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/server.go:18 +0x271
+todo-app/app/controllers.todoEdit({0x106b97620, 0xc0003ae540}, 0xc00046d680)
+	/Users/akiyoshi-takazawa/go/src/todo-app/app/controllers/route.go:101 +0x40a
+net/http.HandlerFunc.ServeHTTP(0x106e1d9c0?, {0x106b97620?, 0xc0003ae540?}, 0x10682ce1a?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2171 +0x29
+net/http.(*ServeMux).ServeHTTP(0x1065efaf9?, {0x106b97620, 0xc0003ae540}, 0xc00046d680)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2688 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0004ac150?}, {0x106b97620?, 0xc0003ae540?}, 0x6?)
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3142 +0x8e
+net/http.(*conn).serve(0xc0004a8120, {0x106b97ce0, 0xc000095500})
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:2044 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.5/libexec/src/net/http/server.go:3290 +0x4b4
+2024/09/02 00:06:43 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:06:45 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:06:45 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 00:06:47 todos.go:32: select * from todos where id = ? 14
+2024/09/02 00:06:47 route.go:32: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
