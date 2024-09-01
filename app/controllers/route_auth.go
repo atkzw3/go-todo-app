@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"errors"
 	"log"
 	"net/http"
 	"todo-app/app/models"
@@ -74,4 +75,21 @@ func authenticate(w http.ResponseWriter, r *http.Request) {
 			http.Redirect(w, r, "/login", http.StatusFound)
 		}
 	}
+}
+
+func logout(w http.ResponseWriter, r *http.Request) {
+	cookie, err := r.Cookie("_cookie")
+	if err != nil {
+		log.Println(err)
+	}
+
+	if !errors.Is(err, http.ErrNoCookie) {
+		session := models.Session{UUID: cookie.Value}
+		err := session.DeleteSessionByUUID()
+		if err != nil {
+			log.Println(err)
+		}
+	}
+
+	http.Redirect(w, r, "/login", http.StatusFound)
 }

@@ -43,3 +43,13 @@
 2024/08/31 23:10:07 main.go:20: true
 2024/09/01 15:29:36 users.go:136: sql: expected 4 destination arguments in Scan, not 5
 2024/09/01 15:29:36 users.go:136: sql: expected 4 destination arguments in Scan, not 5
+2024/09/01 15:40:24 users.go:136: sql: no rows in result set
+2024/09/01 15:40:24 users.go:136: sql: no rows in result set
+2024/09/01 15:40:36 users.go:136: sql: no rows in result set
+2024/09/01 15:40:36 users.go:136: sql: no rows in result set
+2024/09/01 15:40:37 users.go:136: sql: no rows in result set
+2024/09/01 15:40:37 users.go:136: sql: no rows in result set
+2024/09/01 15:40:37 users.go:136: sql: no rows in result set
+2024/09/01 15:40:38 users.go:136: sql: no rows in result set
+2024/09/01 15:40:38 users.go:136: sql: no rows in result set
+2024/09/01 15:40:38 users.go:136: sql: no rows in result set
