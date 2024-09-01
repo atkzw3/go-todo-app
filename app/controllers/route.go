@@ -28,7 +28,7 @@ func index(w http.ResponseWriter, req *http.Request) {
 			log.Println(err)
 		}
 
-		log.Println(user)
+		//log.Println(user)
 
 		todos, err2 := user.GetTodosByUser()
 		if err2 != nil {
@@ -119,6 +119,29 @@ func todoUpdate(w http.ResponseWriter, req *http.Request, id int) {
 		log.Println(err2)
 	}
 	log.Println("update for todo", todo)
+
+	http.Redirect(w, req, "/todos", 302)
+}
+
+func todoDelete(w http.ResponseWriter, req *http.Request, id int) {
+	log.Println("start to delete todo", id)
+	_, err := session(w, req)
+	if err != nil {
+		fmt.Println("ログインしていない")
+		http.Redirect(w, req, "/login", 302)
+	}
+
+	todo, err := models.GetTodo(id)
+	if err != nil {
+		log.Println(err)
+	}
+
+	err2 := todo.DeleteTodo()
+
+	if err2 != nil {
+		log.Println(err2)
+	}
+	log.Println("delete for todo", todo)
 
 	http.Redirect(w, req, "/todos", 302)
 }

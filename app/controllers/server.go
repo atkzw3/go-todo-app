@@ -25,7 +25,7 @@ func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) 
 	}
 }
 
-var validPath = regexp.MustCompile("^/todos/(edit|update)/([0-9]+)$")
+var validPath = regexp.MustCompile("^/todos/(edit|update|delete)/([0-9]+)$")
 
 func parseURL(fn func(http.ResponseWriter, *http.Request, int)) http.HandlerFunc {
 	fmt.Println("parseURL")
@@ -70,6 +70,7 @@ func StartMainServer() error {
 	// / が末尾についていれば、idなどを渡すことが可能
 	http.HandleFunc("/todos/edit/", parseURL(todoEdit))
 	http.HandleFunc("/todos/update/", parseURL(todoUpdate))
+	http.HandleFunc("/todos/delete/", parseURL(todoDelete))
 
 	return http.ListenAndServe(":"+config.Config.Port, nil)
 }

@@ -1304,3 +1304,21 @@ created by net/http.(*Server).Serve in goroutine 1
 2024/09/02 00:37:57 route.go:114: update for todo {14 作成するよ！！=> 更新します！ => もう一回！！ 9 2024-09-01 16:13:13.425667 +0900 +0900}
 2024/09/02 00:37:57 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
 2024/09/02 00:37:57 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 05:58:29 route_auth.go:57: sql: no rows in result set
+2024/09/02 05:58:29 server.go:3418: http: superfluous response.WriteHeader call from todo-app/app/controllers.authenticate (route_auth.go:75)
+2024/09/02 05:59:20 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 05:59:20 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 06:02:06 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 06:02:06 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 06:02:13 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 06:02:13 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 06:03:02 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 06:03:02 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 06:03:06 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 06:03:10 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 06:03:11 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 06:03:25 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 06:03:25 route.go:31: {9 77a1ba66-0e14-41e1-b449-20593becfad8 a s@test.com 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8 2024-09-01 15:57:53.292417 +0900 +0900 []}
+2024/09/02 06:06:46 route.go:127: start to delete todo 14
+2024/09/02 06:06:46 todos.go:32: select * from todos where id = ? 14
+2024/09/02 06:06:46 route.go:144: delete for todo {14 作成するよ！！=> 更新します！ => もう一回！！ 9 2024-09-01 16:13:13.425667 +0900 +0900}
